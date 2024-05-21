@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knapsack Solver Results</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+           background-color: #f8f9fa;
+            color: #ccc;
+        }
+        .container {
+            background-color: #fff; /* Fond blanc pour le cadre */
+            border-radius: 10px; /* Coins arrondis */
+            padding: 20px; /* Espacement intérieur */
+            margin-top: 50px; /* Espacement supérieur */
+        }
+        h1 {
+            color: #007bff;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+        }
+        th, td {
+            text-align: center;
+            padding: 10px;
+        }
+        th {
+            background-color: #007bff; /* Bleu pour l'en-tête du tableau */
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4 mb-4">Results</h1>
+        <div class="table-responsive"> <!-- Ajout de la classe pour la responsivité -->
+            <table class="table table-bordered">
+                <thead >
+                    <tr>
+                        <th>Method</th>
+                        <th>Solution</th>
+                        <th>Value</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for result in results %}
+                    <tr>
+                        <td>{{ result.method }}</td>
+                        <td>{{ result.solution }}</td>
+                        <td>{{ result.value }}</td>
+                        <td>{{ result.time }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
